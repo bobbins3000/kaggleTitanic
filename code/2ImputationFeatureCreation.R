@@ -16,6 +16,15 @@ head(train$Name, n=10L)
 
 ## function for extracting honorific (i.e. title) from the Name feature
 
+getTitle <- function(data) {
+  title.dot.start <- regexpr("\\,[A-Z ]{1,20}\\.", data$Name, TRUE)
+  title.comma.end <- title.dot.start 
+  + attr(title.dot.start, "match.length")-1
+  data$Title <- substr(data$Name, title.dot.start+2, title.comma.end-1)
+  return (data$Title)
+}  
+
+
 titleDotStart <- regexpr("\\,[A-Z ]{1,20}\\.", train$Name, TRUE)
 titleCommaEnd <- titleDotStart + attr(titleDotStart, "match.length")-1
 train$Title <- substr(train$Name, titleDotStart+2, titleCommaEnd-1)
