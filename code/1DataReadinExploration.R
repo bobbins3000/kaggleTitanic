@@ -14,6 +14,9 @@
 library(Amelia)
 library(corrgram)
 library(Hmisc)
+library(ggplot2)
+require(plyr) 
+require(stringr)
 
 # Data has already been loaded from Kaggle to 'titanic/inputs' to my GitHub repo
 
