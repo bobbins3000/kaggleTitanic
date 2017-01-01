@@ -18,6 +18,7 @@ library(ggplot2)
 library(plyr) 
 library(stringr)
 library(caret)
+library(pROC)
 
 # Data has already been loaded from Kaggle to 'titanic/inputs' to my GitHub repo
 
