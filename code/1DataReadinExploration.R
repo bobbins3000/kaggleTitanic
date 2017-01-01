@@ -13,6 +13,7 @@
 # Run libraries
 library(Amelia)
 library(corrgram)
+library(Hmisc)
 
 # Data has already been loaded from Kaggle to 'titanic/inputs' to my GitHub repo
 
